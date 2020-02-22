@@ -12,6 +12,9 @@ class AddSong extends React.Component {
   state = {
     title     : ''
   }
+  state = {
+    artist     : ''
+  }
 
   // #######################################################
   // # Render
@@ -43,6 +46,11 @@ class AddSong extends React.Component {
                 <input type='' value={this.state.title} onChange={this.handleTitleUpdate.bind(this)} />
               </label>
             </div>
+            <div>
+            <label>song Artist:
+                <input type='' value={this.state.artist} onChange={this.handleArtistUpdate.bind(this)} />
+              </label>
+            </div>
 
             {/* <div>
               <label>song Content:
@@ -69,6 +77,10 @@ class AddSong extends React.Component {
     this.setState({content: e.target.value || null});
   }
 
+  handleArtistUpdate(e) {
+    this.setState({artist: e.target.value || null});
+  }
+
   handleSubmit(e) {
 
     // Prevent the default form submit action
@@ -83,6 +95,7 @@ class AddSong extends React.Component {
       body: JSON.stringify({
         authoredBy: this.state.authoredBy,
         title     : this.state.title,
+        artist     : this.state.artist,
         content   : this.state.content
       })}
     )

@@ -8,7 +8,13 @@ const SongSchema  = new mongoose.Schema({
       type      : String,
       required  : true,
       validator : value => !validator.isEmpty(value)
-    }
+    },
+    artist: {
+      type      : String,
+      required  : true,
+      validator : value => !validator.isEmpty(value)
+    },
+    
 
   }, SchemeConfig);
 

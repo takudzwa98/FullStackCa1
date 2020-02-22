@@ -32,7 +32,9 @@ class Song extends React.Component {
     } else {
       return (
         <div>
-          <h1>{this.state.song.title}</h1>
+          <h1>Song name</h1><p>{this.state.song.title}</p>
+          <p>---------------------------------------------</p>
+          <h1>Artist</h1><p>{this.state.song.artist}</p>
           <Link to='/'>Back to All songs</Link>
         </div>
       )
