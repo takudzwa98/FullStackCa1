@@ -3,7 +3,7 @@ import urlToCurrentDomain from '../lib/urlToCurrentDomain';
 import {Link}             from '@reach/router';
 import * as Config        from '../config.json'
 
-class Cakes extends React.Component {
+class Songs extends React.Component {
 
   // #######################################################
   // # Local state
@@ -17,46 +17,46 @@ class Cakes extends React.Component {
 
   render() {
 
-    if (!this.state.cakes && this.state.cakesLoaded === true) {
+    if (!this.state.songs && this.state.songsLoaded === true) {
       return (
-        <p>Error loading cakes. Try again later.</p>
+        <p>Error loading songs. Try again later.</p>
       );
-    } else if (!this.state.cakes) {
+    } else if (!this.state.songs) {
       return (
-        <p>Loading cakes...</p>
+        <p>Loading songs...</p>
       );
-    } else if (this.state.cakes.length === 0) {
+    } else if (this.state.songs.length === 0) {
       return (
-        <p>Sorry, no cakes are available</p>
+        <p>Sorry, no songs are available</p>
       );
     } else {
       return (
         <div>
-          <h1>All Cakes in the database</h1>
+          <h1>All Songs in the database</h1>
           <ul>
-            {this.state.cakes.map(cake => (
-              <li key={`cake_${cake._id}`}><Link to={`/cake/${cake._id}`}>{cake.title}</Link></li>
+            {this.state.songs.map(song => (
+              <li key={`song_${song._id}`}><Link to={`/song/${song._id}`}>{song.title}</Link></li>
             ))}
           </ul>
-          <p><Link to='/add-cake'>Add a new Cake</Link></p>
+          <p><Link to='/add-song'>Add a new Song</Link></p>
         </div>
       )
     }
   }
 
   componentDidMount() {
-    fetch(urlToCurrentDomain(Config.cakesAPI))
+    fetch(urlToCurrentDomain(Config.songsAPI))
       .then (res  => res.json())
       .then (json => {
-        this.setState({cakes       : json});
-        this.setState({cakesLoaded : true});
+        this.setState({songs       : json});
+        this.setState({songsLoaded : true});
       })
       .catch(err => {
-        this.setState({cakesLoaded: true});
+        this.setState({songsLoaded: true});
       });
   }
 
 }
 
-export default Cakes;
+export default Songs;
 

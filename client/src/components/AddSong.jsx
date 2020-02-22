@@ -3,7 +3,7 @@ import {navigate, Link}   from '@reach/router';
 import urlToCurrentDomain from '../lib/urlToCurrentDomain';
 import * as Config        from '../config.json'
 
-class AddCake extends React.Component {
+class AddSong extends React.Component {
 
   // #######################################################
   // # Local state
@@ -23,39 +23,39 @@ class AddCake extends React.Component {
       return (
         <div>
           <h1>Error</h1>
-          <p>Sorry, there was an error creating the cake. The error was: {this.state.reportedError || 'Unknown'}</p>
+          <p>Sorry, there was an error creating the song. The error was: {this.state.reportedError || 'Unknown'}</p>
           <a href='#' onClick={this.resetForRetry.bind(this)}>Try again</a>&nbsp;|&nbsp;
           <Link to='/'>Back to All cakes</Link>
         </div>
       );
     } else if (this.state.processingAdd) {
       return (
-        <div>Adding cake...</div>
+        <div>Adding song...</div>
       );
     } else {
       return (
         <div>
-          <h1>Add a cake</h1>
+          <h1>Add a song</h1>
           <form onSubmit={this.handleSubmit.bind(this)}>
 
             <div>
-              <label>cake Title:
+              <label>song Title:
                 <input type='' value={this.state.title} onChange={this.handleTitleUpdate.bind(this)} />
               </label>
             </div>
 
             {/* <div>
-              <label>cake Content:
+              <label>song Content:
                 <textarea value={this.state.content} onChange={this.handleContentUpdate.bind(this)}></textarea>
               </label>
             </div> */}
 
             <div>
-              <input type='submit' value='Add Cake' />
+              <input type='submit' value='Add Song' />
             </div>
 
           </form>
-          <Link to='/'>Back to All cakes</Link>
+          <Link to='/'>Back to All songs</Link>
         </div>
       );
     }
@@ -92,7 +92,7 @@ class AddCake extends React.Component {
         }
         return res.json();
       })
-      .then (json => navigate(`/cake/${json._id}`))
+      .then (json => navigate(`/song/${json._id}`))
       .catch(err => {
         this.setState({reportedError: err.message || 'Unknown'});
       })
