@@ -25,7 +25,7 @@ class AddSong extends React.Component {
           <h1>Error</h1>
           <p>Sorry, there was an error creating the song. The error was: {this.state.reportedError || 'Unknown'}</p>
           <a href='#' onClick={this.resetForRetry.bind(this)}>Try again</a>&nbsp;|&nbsp;
-          <Link to='/'>Back to All cakes</Link>
+          <Link to='/'>Back to All songs</Link>
         </div>
       );
     } else if (this.state.processingAdd) {
@@ -75,7 +75,7 @@ class AddSong extends React.Component {
     e.preventDefault();
 
     // Perform a POST call for the new data
-    fetch(urlToCurrentDomain(`${Config.cakesAPI}`), {
+    fetch(urlToCurrentDomain(`${Config.songsAPI}`), {
       method : 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -104,9 +104,9 @@ class AddSong extends React.Component {
   }
 
   componentDidMount() {
-    // this.getComments(this.props.cakeID);
+    // this.getComments(this.props.songID);
   }
 
 }
 
-export default AddCake;
+export default AddSong;
