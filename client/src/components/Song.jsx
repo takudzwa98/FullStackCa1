@@ -35,6 +35,8 @@ class Song extends React.Component {
           <h1>Song name</h1><p>{this.state.song.title}</p>
           <p>---------------------------------------------</p>
           <h1>Artist</h1><p>{this.state.song.artist}</p>
+          <p>---------------------------------------------</p>
+          <h1>Release Date</h1><p>{this.state.song.releasedate}</p>
           <Link to='/'>Back to All songs</Link>
         </div>
       )

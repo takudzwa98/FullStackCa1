@@ -15,6 +15,9 @@ class AddSong extends React.Component {
   state = {
     artist     : ''
   }
+  state = {
+    releasedate    : ''
+  }
 
   // #######################################################
   // # Render
@@ -42,13 +45,18 @@ class AddSong extends React.Component {
           <form onSubmit={this.handleSubmit.bind(this)}>
 
             <div>
-              <label>song Title:
+              <label>Title:
                 <input type='' value={this.state.title} onChange={this.handleTitleUpdate.bind(this)} />
               </label>
             </div>
             <div>
-            <label>song Artist:
+            <label>Artist:
                 <input type='' value={this.state.artist} onChange={this.handleArtistUpdate.bind(this)} />
+              </label>
+            </div>
+            <div>
+            <label>ReleaseDate:
+                <input type='' value={this.state.releasedate} onChange={this.handleReleaseDatetUpdate.bind(this)} />
               </label>
             </div>
 
@@ -73,8 +81,8 @@ class AddSong extends React.Component {
     this.setState({title: e.target.value || null});
   }
 
-  handleContentUpdate(e) {
-    this.setState({content: e.target.value || null});
+  handleReleaseDatetUpdate(e) {
+    this.setState({releasedate: e.target.value || null});
   }
 
   handleArtistUpdate(e) {
@@ -96,7 +104,7 @@ class AddSong extends React.Component {
         authoredBy: this.state.authoredBy,
         title     : this.state.title,
         artist     : this.state.artist,
-        content   : this.state.content
+        releasedate : this.state.releasedate,
       })}
     )
       .then (res  => {

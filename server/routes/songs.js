@@ -39,8 +39,9 @@ router.get('/:id([0-9a-fA-F]{24})', (req, res) => {
 // POST Create a new song
 router.post('/', (req, res) => {
   return new Song({
-    title     : req.body.title,
+    title      : req.body.title,
     artist     : req.body.artist,
+    releasedate: req.body.releasedate,
   })
   .save()
   .then (song => Song.populate(song, {path: '_id'}))
@@ -69,7 +70,8 @@ router.put('/:id([0-9a-fA-F]{24})', (req, res) => {
       {_id: req.params.id},
       {$set: {
         title  : req.body.title,
-        artist     : req.body.artist,
+        artist : req.body.artist,
+        releasedate: req.body.releasedate,
       }},
       {new: true}
     )

@@ -14,6 +14,11 @@ const SongSchema  = new mongoose.Schema({
       required  : true,
       validator : value => !validator.isEmpty(value)
     },
+    releasedate: {
+      type      : String,
+      required  : true,
+      validator : value => !validator.isEmpty(value)
+    }
     
 
   }, SchemeConfig);
