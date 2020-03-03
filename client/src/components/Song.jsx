@@ -2,6 +2,7 @@ import React              from 'react';
 import {Link}             from '@reach/router';
 import urlToCurrentDomain from '../lib/urlToCurrentDomain';
 import * as Config        from '../config.json'
+import './main.css';
 
 class Song extends React.Component {
 
@@ -31,7 +32,7 @@ class Song extends React.Component {
       );
     } else {
       return (
-        <div>
+        <div className="table">
           <h1>Song name</h1><p>{this.state.song.title}</p>
           <p>---------------------------------------------</p>
           <h1>Artist</h1><p>{this.state.song.artist}</p>

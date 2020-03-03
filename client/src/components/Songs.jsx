@@ -2,6 +2,7 @@ import React              from 'react';
 import urlToCurrentDomain from '../lib/urlToCurrentDomain';
 import {Link}             from '@reach/router';
 import * as Config        from '../config.json'
+import ''
 
 class Songs extends React.Component {
 
@@ -32,7 +33,7 @@ class Songs extends React.Component {
     } else {
       return (
         <div>
-          <h1>All Songs in the database</h1>
+          <h1>Your Playlist</h1>
           <ul>
             {this.state.songs.map(song => (
               <li key={`song_${song._id}`}><Link to={`/song/${song._id}`}>{song.title}</Link></li>

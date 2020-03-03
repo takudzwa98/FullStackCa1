@@ -1,6 +1,7 @@
 import React              from 'react';
 import {navigate, Link}   from '@reach/router';
 import urlToCurrentDomain from '../lib/urlToCurrentDomain';
+import './main.css'
 import * as Config        from '../config.json'
 
 class AddSong extends React.Component {
@@ -69,7 +70,7 @@ class AddSong extends React.Component {
             <div>
               <input type='submit' value='Add Song' />
             </div>
-
+  
           </form>
           <Link to='/'>Back to All songs</Link>
         </div>
