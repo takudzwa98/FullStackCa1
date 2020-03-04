@@ -9,7 +9,7 @@ import AddChart from './AddChart';
 import Header from './Header';
 import Nvrbar       from './Nvrbar';
 import Imageslider  from './Imageslider';
-
+import Footer from './Footer';
 
 class App extends React.Component {
 
@@ -30,6 +30,7 @@ class App extends React.Component {
         <Chart    path='/chart/:chartID' />
         <AddChart path='/add-chart/' />
       </Router>
+      <Footer/>
      
       
     
