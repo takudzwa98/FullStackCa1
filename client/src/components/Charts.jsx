@@ -2,7 +2,7 @@ import React              from 'react';
 import urlToCurrentDomain from '../lib/urlToCurrentDomain';
 import {Link}             from '@reach/router';
 import './main.css';
-import * as Config        from '../config2.json'
+import * as Config2       from '../config2.json'
 
 
 class Charts extends React.Component {
@@ -34,7 +34,7 @@ class Charts extends React.Component {
     } else {
       return (
         <div className='yourPlayList'>
-          <h1>Your Playlist</h1>
+          <h1>Your Album List</h1>
          <center>
 
           <ul>
@@ -43,7 +43,7 @@ class Charts extends React.Component {
             ))}
           </ul>
           </center>
-          <p><Link className='link'  to='/add-chart'>Add a new Chart To Your PlayList!</Link></p>
+          <p><Link className='link'  to='/add-chart'>Add a new ALbum To Your PlayList!</Link></p>
         </div>
       )
     }

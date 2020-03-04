@@ -3,6 +3,9 @@ import {Router} from "@reach/router";
 import Songs   from './Songs';
 import Song    from './Song';
 import AddSong from './AddSong';
+import Charts   from './Charts';
+import Chart    from './Chart';
+import AddChart from './AddChart';
 import Header from './Header';
 import Nvrbar       from './Nvrbar';
 import Imageslider  from './Imageslider';
@@ -21,10 +24,11 @@ class App extends React.Component {
         <Song    path='/song/:songID' />
         <AddSong path='/add-song/' />
       </Router>
+      
       <Router>
-        <Songs   path='/' />
-        <Song    path='/chart/:chartID' />
-        <AddSong path='/add-chart/' />
+        <Charts   path='/' />
+        <Chart    path='/chart/:chartID' />
+        <AddChart path='/add-chart/' />
       </Router>
      
       

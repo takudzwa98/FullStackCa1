@@ -1,7 +1,7 @@
 import React              from 'react';
 import {Link}             from '@reach/router';
 import urlToCurrentDomain from '../lib/urlToCurrentDomain';
-import * as Config        from '../config2.json'
+import * as Config2        from '../config2.json'
 import './main.css';
 
 class Chart extends React.Component {
@@ -33,12 +33,12 @@ class Chart extends React.Component {
     } else {
       return (
         <div className="table">
-          <h1>Chart name</h1><p>{this.state.chart.title}</p>
+          <h1>ALbum Name</h1><p>{this.state.chart.title}</p>
           <p>---------------------------------------------</p>
           <h1>Artist</h1><p>{this.state.chart.artist}</p>
           <p>---------------------------------------------</p>
-          <h1>Release Date</h1><p>{this.state.chart.chartno}</p>
-          <Link to='/'>Back to All charts</Link>
+          <h1>Chart Number</h1><p>{this.state.chart.chartno}</p>
+          <Link to='/'>Back to Main menu</Link>
         </div>
       )
     }

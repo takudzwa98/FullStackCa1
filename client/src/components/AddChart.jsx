@@ -2,7 +2,7 @@ import React              from 'react';
 import {navigate, Link}   from '@reach/router';
 import urlToCurrentDomain from '../lib/urlToCurrentDomain';
 import './main.css'
-import * as Config        from '../config.json'
+import * as Config2        from '../config2.json'
 
 class AddChart extends React.Component {
 
@@ -42,11 +42,11 @@ class AddChart extends React.Component {
     } else {
       return (
         <div>
-          <h1>Add a chart</h1>
+          <h1>Add a Album</h1>
           <form onSubmit={this.handleSubmit.bind(this)}>
 
             <div>
-              <label>Title:
+              <label>Album Name:
                 <input type='' value={this.state.title} onChange={this.handleTitleUpdate.bind(this)} />
               </label>
             </div>
@@ -56,7 +56,7 @@ class AddChart extends React.Component {
               </label>
             </div>
             <div>
-            <label>ReleaseDate:
+            <label>Tracks:
                 <input type='' value={this.state.chartno} onChange={this.handleChartnotUpdate.bind(this)} />
               </label>
             </div>
@@ -72,7 +72,7 @@ class AddChart extends React.Component {
             </div>
   
           </form>
-          <Link to='/'>Back to All charts</Link>
+          <Link to='/'>Back to All Albums</Link>
         </div>
       );
     }
