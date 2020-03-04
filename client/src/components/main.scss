@@ -3,6 +3,12 @@ h1{
     font-style: oblique;
     text-align: center;
     text-shadow: 1px 1px red;
+    border-style: solid;
+    border-color: white;
+    border-width: medium;
+    border-radius: 800px;
+    background-color: black;
+    
     
   
     
@@ -40,7 +46,7 @@ h1{
   
 .table{
     color:black;
-    background-color:rgb(228, 222, 222);
+    background-color:rgb(41, 40, 40);
     text-align: center;
     width: 60%;
 }
@@ -51,7 +57,7 @@ text-align: center;
 font-style: unset;
 border: black;
 
-background-color:rgb(228, 222, 222);
+background-color:rgb(27, 26, 26);
 }
 
 * {
@@ -70,4 +76,6 @@ background-color:rgb(228, 222, 222);
     padding: 1em;
     display: flex;
     align-items: flex-end;
+    border-radius: 30px;
+    border-style: dotted;
   }

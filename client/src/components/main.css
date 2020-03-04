@@ -3,6 +3,11 @@ h1 {
   font-style: oblique;
   text-align: center;
   text-shadow: 1px 1px red;
+  border-style: solid;
+  border-color: white;
+  border-width: medium;
+  border-radius: 800px;
+  background-color: black;
 }
 
 .header {
@@ -36,7 +41,7 @@ h1 {
 
 .table {
   color: black;
-  background-color: #e4dede;
+  background-color: #292828;
   text-align: center;
   width: 60%;
 }
@@ -46,7 +51,7 @@ h1 {
   text-align: center;
   font-style: unset;
   border: black;
-  background-color: #e4dede;
+  background-color: #1b1a1a;
 }
 
 * {
@@ -77,5 +82,7 @@ li {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  border-radius: 30px;
+  border-style: dotted;
 }
 /*# sourceMappingURL=main.css.map */
