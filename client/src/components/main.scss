@@ -42,7 +42,7 @@ h1{
     color:black;
     background-color:rgb(228, 222, 222);
     text-align: center;
-    width: 100%;
+    width: 60%;
 }
 .yourPlayList
 {
@@ -50,9 +50,24 @@ color: red;
 text-align: center;
 font-style: unset;
 border: black;
+
 background-color:rgb(228, 222, 222);
 }
-ul{
+
+* {
+    box-sizing: border-box;
+  }
+  ul {
     list-style-type: none;
-    color: black;
-}
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  li {
+    flex: 0 0 50%;
+    border: 1px solid rgb(223, 34, 34);
+    background-color: black;
+    padding: 1em;
+    display: flex;
+    align-items: flex-end;
+  }

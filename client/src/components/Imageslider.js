@@ -7,39 +7,22 @@ class ImageSlider extends React.Component {
     render() {
       return (
         <Carousel>
-        <Carousel.Item>
-          <img
-            className="text"
-            
-            alt="Add Your Favourite music"
-          />
-          <Carousel.Caption>
-          
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
         
-          <img
-            className="text"
-            
-            alt="All your music history is saved"
-          />
-     
-          <Carousel.Caption>
-        
-          </Carousel.Caption>
-        </Carousel.Item>
         <Carousel.Item>
           <img
-            className="text"
-           
+            className="d-block w-100"
+            src="https://66.media.tumblr.com/e81f69f76415715e64082e24b1394c14/tumblr_mog3efY36J1sq4eiqo1_500.gif"
             alt="Third slide"
           />
       
           <Carousel.Caption>
-         
+            <h3>Eminem</h3>
+            <p>Like a toy soldier OUT NOW!</p>
           </Carousel.Caption>
         </Carousel.Item>
+      
+          
+ 
       </Carousel>
       );
     }

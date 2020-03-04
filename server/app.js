@@ -3,6 +3,7 @@ const express        = require('express');
 const cookieParser   = require('cookie-parser');
 const logger         = require('morgan');
 const songsRouter    = require('./routes/songs');
+const chartsRouter    = require('./routes/charts');
 const app            = express();
 const mongoose       = require('mongoose');
 const config         = require('./config.json');
@@ -38,6 +39,7 @@ app.use(function(req, res, next) {
 // Note 2 routers, one for each data resource (topics and comments)
 //app.use('/topics',   topicsRouter);
 app.use('/songs', songsRouter);
+app.use('/charts', chartsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

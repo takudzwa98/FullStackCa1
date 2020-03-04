@@ -2,10 +2,10 @@ import React              from 'react';
 import urlToCurrentDomain from '../lib/urlToCurrentDomain';
 import {Link}             from '@reach/router';
 import './main.css';
-import * as Config        from '../config.json'
+import * as Config        from '../config2.json'
 
 
-class Songs extends React.Component {
+class Charts extends React.Component {
 
   // #######################################################
   // # Local state
@@ -19,17 +19,17 @@ class Songs extends React.Component {
 
   render() {
 
-    if (!this.state.songs && this.state.songsLoaded === true) {
+    if (!this.state.charts && this.state.chartsLoaded === true) {
       return (
-        <p>Error loading songs. Try again later.</p>
+        <p>Error loading charts. Try again later.</p>
       );
-    } else if (!this.state.songs) {
+    } else if (!this.state.charts) {
       return (
-        <p>Loading songs...</p>
+        <p>Loading charts...</p>
       );
-    } else if (this.state.songs.length === 0) {
+    } else if (this.state.charts.length === 0) {
       return (
-        <p>Sorry, no songs are available</p>
+        <p>Sorry, no charts are available</p>
       );
     } else {
       return (
@@ -38,30 +38,30 @@ class Songs extends React.Component {
          <center>
 
           <ul>
-            {this.state.songs.map(song => (
-              <li key={`song_${song._id}`}><Link to={`/song/${song._id}`}>{song.title}</Link></li>
+            {this.state.charts.map(chart => (
+              <li key={`chart_${chart._id}`}><Link to={`/chart/${chart._id}`}>{chart.title}</Link></li>
             ))}
           </ul>
           </center>
-          <p><Link className='link'  to='/add-song'>Add a new Song To Your PlayList!</Link></p>
+          <p><Link className='link'  to='/add-chart'>Add a new Chart To Your PlayList!</Link></p>
         </div>
       )
     }
   }
 
   componentDidMount() {
-    fetch(urlToCurrentDomain(Config.songsAPI))
+    fetch(urlToCurrentDomain(Config2.chartsAPI))
       .then (res  => res.json())
       .then (json => {
-        this.setState({songs       : json});
-        this.setState({songsLoaded : true});
+        this.setState({charts       : json});
+        this.setState({chartsLoaded : true});
       })
       .catch(err => {
-        this.setState({songsLoaded: true});
+        this.setState({chartsLoaded: true});
       });
   }
 
 }
 
-export default Songs;
+export default Charts;
 

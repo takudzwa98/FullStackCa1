@@ -1,6 +1,6 @@
 import React from 'react';
 
-var Link = require('react-router').Link
+import {Link}             from '@reach/router';
 
 class UsersList extends React.Component {
 constructor(_props) {

@@ -15,15 +15,20 @@ class App extends React.Component {
       <div>
       <Nvrbar />
       <Header  path ='./Header.'/>
-     
+      <Imageslider/> 
       <Router>
         <Songs   path='/' />
         <Song    path='/song/:songID' />
-        
+        <AddSong path='/add-song/' />
       </Router>
-      <AddSong path='/add-song/' />
-      <UsersList/>
-      <Imageslider/>
+      <Router>
+        <Songs   path='/' />
+        <Song    path='/chart/:chartID' />
+        <AddSong path='/add-chart/' />
+      </Router>
+     
+      
+    
       </div>
     );
   }
