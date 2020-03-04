@@ -2,9 +2,15 @@ h1 {
   color: pink;
 }
 
-Header {
-  color: red;
-  height: 300px;
+.header {
+  height: 200px;
+  background-color: black;
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-size: 110px;
+  font-style: oblique;
+  text-shadow: 2px 2px #ff0000;
 }
 
 .btn-flat {
@@ -15,6 +21,15 @@ Header {
 .btn-xxl {
   padding: 1rem 1.5rem;
   font-size: 1.5rem;
+}
+
+.text {
+  color: red;
+  text-align: center;
+  background-color: black;
+  border-radius: 20px;
+  position: static;
+  right: 500px;
 }
 
 .table {

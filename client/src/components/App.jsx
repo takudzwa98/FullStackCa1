@@ -5,18 +5,21 @@ import Song    from './Song';
 import AddSong from './AddSong';
 import Header from './Header';
 import Nvrbar       from './Nvrbar';
+import Imageslider       from './Imageslider';
 class App extends React.Component {
 
   render() {
     return (
       <div>
       <Nvrbar />
+     
+      <Header  path ='./Header'/>
       <Router>
         <Songs   path='/' />
         <Song    path='/song/:songID' />
         <AddSong path='/add-song/' />
-        <Header  path ='./Header'/>
       </Router>
+      <Imageslider/>
       </div>
     );
   }
