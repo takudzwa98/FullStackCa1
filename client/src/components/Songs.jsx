@@ -1,6 +1,7 @@
 import React              from 'react';
 import urlToCurrentDomain from '../lib/urlToCurrentDomain';
 import {Link}             from '@reach/router';
+import './main.css';
 import * as Config        from '../config.json'
 
 
@@ -32,8 +33,17 @@ class Songs extends React.Component {
       );
     } else {
       return (
-        <div>
+        <div className='yourPlayList'>
           <h1>Your Playlist</h1>
+          <Table striped bordered hover>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Username</th>
+    </tr>
+  </thead>
           <ul>
             {this.state.songs.map(song => (
               <li key={`song_${song._id}`}><Link to={`/song/${song._id}`}>{song.title}</Link></li>

@@ -1,41 +1,62 @@
 h1 {
-  color: pink;
+  color: black;
+  font-style: oblique;
+  text-align: center;
+  text-shadow: 1px 1px red;
 }
 
 .header {
   height: 200px;
   background-color: black;
   width: 100%;
-  color: white;
-  text-align: center;
   font-size: 110px;
+  text-align: center;
+  text-shadow: 2px 2px red;
   font-style: oblique;
-  text-shadow: 2px 2px #ff0000;
 }
 
-.btn-flat {
-  background-color: purple;
-  color: white;
-}
-
-.btn-xxl {
-  padding: 1rem 1.5rem;
-  font-size: 1.5rem;
-}
 
 .text {
   color: red;
   text-align: center;
-  background-color: black;
+  background-color: red;
   border-radius: 20px;
   position: static;
   right: 500px;
 }
 
 .table {
-  color: red;
-  background-color: red;
+  color: black;
+  background-color: #e4dede;
   text-align: center;
-  width: 200px;
+  width: 100%;
+}
+
+.yourPlayList {
+  color: red;
+  text-align: center;
+  font-style: unset;
+  border: black;
+  background-color: #e4dede;
+}
+
+* {
+  box-sizing: border-box;
+}
+ul {
+  list-style-type: none;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  color: black;
+  background-color: rgb(44, 43, 43);
+}
+li {
+  flex: 0 0 50%;
+  border: 1px solid grey;
+  padding: 1em;
+  display: flex;
+  align-items: flex-end;
+  color: black;
 }
 /*# sourceMappingURL=main.css.map */

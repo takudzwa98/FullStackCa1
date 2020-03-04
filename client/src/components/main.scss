@@ -1,10 +1,20 @@
 h1{
-    color: pink;
+    color: black;
+    font-style: oblique;
+    text-align: center;
+    text-shadow: 1px 1px red;
+    
+  
+    
 }
 .header{
     height: 200px;
     background-color: black;
     width: 100%;
+    font-size: 110px;
+    text-align: center;
+    text-shadow: 2px 2px red;
+    font-style:oblique;
 }
 
 .btn-flat {
@@ -20,7 +30,7 @@ h1{
 {
     color: red;
     text-align: center;
-    background-color: black;
+    background-color: red;
     border-radius: 20px;
     position: static;
     right: 500px;
@@ -29,8 +39,20 @@ h1{
     
   
 .table{
-    color: red;
-    background-color: red;
+    color:black;
+    background-color:rgb(228, 222, 222);
     text-align: center;
-    width: 200px;
+    width: 100%;
+}
+.yourPlayList
+{
+color: red;
+text-align: center;
+font-style: unset;
+border: black;
+background-color:rgb(228, 222, 222);
+}
+ul{
+    list-style-type: none;
+    color: black;
 }
